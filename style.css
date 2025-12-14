@@ -1,0 +1,112 @@
+/* --- CSS STYLES (The "Look") --- */
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .chat-container {
+            background-color: white;
+            width: 350px;
+            height: 600px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .header {
+            background-color: #c96116;
+            color: white;
+            padding: 20px 15px;
+            text-align: left;
+            display: flex;
+            flex-direction: row; /* Changed to row */
+            align-items: center; /* Vertically center items */
+        }
+
+        /* NEW: Styles for the logo image */
+        .bot-logo {
+            width: 80px;  /* New rectangular width */
+            height: 60px; /* New rectangular height */
+            /* border-radius: 50%; Removed for rectangle */
+            border: 2px solid white;
+            margin-right: 15px; /* Space between image and name */
+            object-fit: cover;
+            background-color: white;
+        }
+
+        .header-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header h1 { margin: 0; font-size: 20px; font-weight: bold;}
+        .header h2 { margin: 5px 0 0; font-size: 14px; font-weight: normal; opacity: 0.9; }
+
+        #message-area {
+            flex-grow: 1;
+            padding: 15px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .message {
+            max-width: 80%;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .bot-message {
+            background-color: #e0e0e0;
+            align-self: flex-start;
+            border-bottom-left-radius: 0;
+        }
+
+        .user-message {
+            background-color: #c96116;
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 0;
+        }
+
+        .input-area {
+            padding: 15px;
+            border-top: 1px solid #ddd;
+            display: flex;
+            gap: 10px;
+        }
+
+        input {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+        }
+
+        button {
+            background-color: #c96116;
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+        }
+        
+        button:hover { background-color: #ed7d0d; }
